@@ -1,12 +1,6 @@
 import { Link } from "expo-router";
 import React from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function index() {
   return (
@@ -27,18 +21,18 @@ export default function index() {
 
       {/* Buttons */}
       <View className="mt-12 flex-row space-x-12">
-        <View className="px-6 py-4 flex-row justify-center bg-gray-300 rounded">
-          <Link href={"/onboarding"} asChild>
+        <View className="px-6 py-4 flex-row justify-center bg-slate-200 rounded">
+          <Link href={"/homescreen"} asChild>
             <TouchableOpacity>
               <Text className="font-semibold text-base">Log in</Text>
             </TouchableOpacity>
           </Link>
         </View>
 
-        <View className="px-6 py-4 flex-row justify-center bg-primary rounded">
+        <View className="px-6 py-4 flex-row justify-center bg-blue-400 rounded">
           <Link href={"/onboarding"} asChild>
             <TouchableOpacity>
-              <Text className="text-white text-base font-semibold">
+              <Text className="text-slate-50 text-base font-semibold">
                 Get Started
               </Text>
             </TouchableOpacity>
