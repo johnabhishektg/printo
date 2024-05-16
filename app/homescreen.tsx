@@ -5,6 +5,7 @@ import {
   FontAwesome6,
   Feather,
 } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import React from "react";
 import { SafeAreaView, TouchableOpacity, View, Text } from "react-native";
 
@@ -46,20 +47,25 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <TouchableOpacity>
-        <View className="mt-6 flex-row justify-between items-center p-3 border bg-white border-stone-50 shadow rounded-2xl">
-          <View className="p-2">
-            <Feather name="printer" size={38} color="#3599f5" />
+      {/* Print Job Button */}
+      <Link href="./printjob" className="mt-6" asChild>
+        <TouchableOpacity>
+          <View className="flex-row justify-between items-center p-3 border bg-white border-stone-50 shadow rounded-2xl">
+            <View className="p-2">
+              <Feather name="printer" size={38} color="#3599f5" />
+            </View>
+            <View className="ml-4">
+              <Text className="text-xl font-semibold">Print Job</Text>
+              <Text className="text-gray-400 w-64">
+                Get printout of your document and more
+              </Text>
+            </View>
+            <Entypo name="chevron-small-right" size={32} color="#3599f5" />
           </View>
-          <View className="ml-4">
-            <Text className="text-xl font-semibold">Print Job</Text>
-            <Text className="text-gray-400 w-64">
-              Get printout of your document and more
-            </Text>
-          </View>
-          <Entypo name="chevron-small-right" size={32} color="#3599f5" />
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </Link>
+
+      {/* Study material button */}
 
       <TouchableOpacity>
         <View className="mt-6 flex-row justify-between items-center p-3 border bg-white border-stone-50 shadow rounded-2xl">
