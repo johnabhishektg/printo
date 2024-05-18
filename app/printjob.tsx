@@ -3,17 +3,24 @@ import { Text, SafeAreaView, View, TouchableOpacity } from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
 
 export default function PrintJob() {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView className="flex-1 justify-between m-6">
       <View>
         <View className="flex-row items-center space-x-6">
-          <Link href={"./index"} asChild>
-            <TouchableOpacity>
-              <AntDesign name="arrowleft" size={24} color="#3599f5" />
+          <View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.goBack();
+              }}
+            >
+              <AntDesign name="arrowleft" size={24} color="black" />
             </TouchableOpacity>
-          </Link>
+          </View>
           <Text className="text-xl font-semibold">Print Job</Text>
         </View>
 
@@ -53,13 +60,15 @@ export default function PrintJob() {
         </Link>
       </View>
 
-      <TouchableOpacity>
-        <View className="flex-cols justify-center items-center w-full bg-blue-500 p-3 mb-3 rounded-xl">
-          <Text className="text-2xl font-semibold text-white">
-            Print Preview
-          </Text>
-        </View>
-      </TouchableOpacity>
+      <Link href={"./printpreview"} asChild>
+        <TouchableOpacity>
+          <View className="flex-cols justify-center items-center w-full bg-blue-500 p-3 mb-3 rounded-xl">
+            <Text className="text-xl font-semibold text-white">
+              Print Preview
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </Link>
     </SafeAreaView>
   );
 }
