@@ -43,7 +43,7 @@ export default function HomePage() {
       </View>
 
       {/* Print Job Button */}
-      <Link href="./printjob" className="mt-6" asChild>
+      <Link href="../printjob" className="mt-6" asChild>
         <TouchableOpacity>
           <View className="flex-row justify-between items-center p-3 border bg-white border-stone-50 shadow rounded-2xl">
             <View className="p-2">
