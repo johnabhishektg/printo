@@ -32,11 +32,12 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="homescreen" options={{ headerShown: false }} />
         <Stack.Screen name="printjob" options={{ headerShown: false }} />
         <Stack.Screen name="printpreview" options={{ headerShown: false }} />
+        <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding" />
       </Stack>
     </ThemeProvider>

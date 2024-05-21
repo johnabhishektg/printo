@@ -1,16 +1,15 @@
+import React from "react";
 import MenuButton from "@/components/MenuButton";
 import {
   FontAwesome5,
-  Ionicons,
   Entypo,
   FontAwesome6,
   Feather,
 } from "@expo/vector-icons";
 import { Link } from "expo-router";
-import React from "react";
 import { SafeAreaView, TouchableOpacity, View, Text } from "react-native";
 
-export default function HomeScreen() {
+export default function HomePage() {
   return (
     <SafeAreaView className="flex-1 m-6">
       <View className="flex-row justify-between items-center">

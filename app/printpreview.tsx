@@ -1,7 +1,15 @@
 import { AntDesign } from "@expo/vector-icons";
 import { Link, useNavigation } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import { Feather } from "@expo/vector-icons";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 
@@ -12,13 +20,18 @@ export default function PrintPreview() {
   return (
     <SafeAreaView className="flex-1 justify-between m-6">
       <View>
-        <View>
+        <View className="flex-row items-center justify-between">
           <TouchableOpacity
             onPress={() => {
               navigation.goBack();
             }}
           >
             <AntDesign name="arrowleft" size={24} color="black" />
+          </TouchableOpacity>
+
+          <TouchableOpacity className="flex-row items-center space-x-1">
+            <Feather name="edit" size={24} color="#3599f5" />
+            <Text className="text-xl text-blue-500 font-medium">Modify</Text>
           </TouchableOpacity>
         </View>
 
@@ -29,6 +42,7 @@ export default function PrintPreview() {
           </Text>
         </View>
 
+        {/* pdf viewer */}
         <TouchableOpacity>
           <View className="w-full h-[550px] bg-slate-300 mt-6 rounded" />
         </TouchableOpacity>
@@ -52,7 +66,8 @@ export default function PrintPreview() {
           </Text>
         </View>
 
-        <Link href={"./printpreview"} asChild>
+        {/* Checkbox and confirm button */}
+        <Link href={"./printjob"} asChild>
           <TouchableOpacity>
             <View className="flex-cols justify-center items-center w-full bg-blue-500 p-3 mb-3 rounded-xl">
               <Text className="text-xl font-semibold text-white">Confirm</Text>
@@ -63,3 +78,11 @@ export default function PrintPreview() {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  pdf: {
+    flex: 1,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+  },
+});

@@ -30,7 +30,7 @@ export default function index() {
         </View>
 
         <View className="px-6 py-4 flex-row justify-center bg-blue-400 rounded">
-          <Link href={"/onboarding"} asChild>
+          <Link href={"/(drawer)/"} asChild>
             <TouchableOpacity>
               <Text className="text-slate-50 text-base font-semibold">
                 Get Started
