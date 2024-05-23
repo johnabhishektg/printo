@@ -10,17 +10,9 @@ import {
   BottomSheetModalProvider,
   BottomSheetView,
 } from "@gorhom/bottom-sheet";
-import { Link, useNavigation } from "expo-router";
+import { useNavigation } from "expo-router";
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import {
-  Button,
-  Dimensions,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 
 export default function PrintPreview() {
   const navigation = useNavigation();

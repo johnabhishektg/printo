@@ -14,11 +14,13 @@ export default function HomePage() {
     <SafeAreaView className="flex-1 m-6">
       <View className="flex-row justify-between items-center">
         <MenuButton />
-        <TouchableOpacity>
-          <View className="p-3 flex-row justify-center border bg-white border-stone-50 shadow rounded-2xl">
-            <FontAwesome5 name="bell" size={22} color="black" />
-          </View>
-        </TouchableOpacity>
+        <Link href={"../notification"} asChild>
+          <TouchableOpacity>
+            <View className="p-3 flex-row justify-center border bg-white border-stone-50 shadow rounded-2xl">
+              <FontAwesome5 name="bell" size={22} color="black" />
+            </View>
+          </TouchableOpacity>
+        </Link>
       </View>
 
       {/* HEADER CARD */}
@@ -43,7 +45,7 @@ export default function HomePage() {
       </View>
 
       {/* Print Job Button */}
-      <Link href="../printjob" className="mt-6" asChild>
+      <Link href="../(print)/printjob" className="mt-6" asChild>
         <TouchableOpacity>
           <View className="flex-row justify-between items-center p-3 border bg-white border-stone-50 shadow rounded-2xl">
             <View className="p-2">

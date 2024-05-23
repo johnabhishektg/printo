@@ -22,7 +22,7 @@ export default function index() {
       {/* Buttons */}
       <View className="mt-12 flex-row space-x-12">
         <View className="px-6 py-4 flex-row justify-center bg-slate-200 rounded">
-          <Link href={"/homescreen"} asChild>
+          <Link href={"/(drawer)/"} asChild>
             <TouchableOpacity>
               <Text className="font-semibold text-base">Log in</Text>
             </TouchableOpacity>
@@ -30,7 +30,7 @@ export default function index() {
         </View>
 
         <View className="px-6 py-4 flex-row justify-center bg-blue-400 rounded">
-          <Link href={"/(drawer)/"} asChild>
+          <Link href={"/onboarding"} asChild>
             <TouchableOpacity>
               <Text className="text-slate-50 text-base font-semibold">
                 Get Started

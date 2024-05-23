@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 export default function componentName() {
   return (
-    <View className="flex-col py-2 px-6 justify-between h-[90%]">
+    <View className="flex-col py-2 px-6 justify-between h-full">
       {/* Layout */}
       <View>
         <Text className="text-2xl font-semibold">Layout</Text>
@@ -55,7 +55,7 @@ export default function componentName() {
         </View>
       </View>
       {/* Cancel & Apply */}
-      <View className="flex-row items-center justify-between">
+      <View className="flex-row items-center justify-between mb-8">
         <TouchableOpacity>
           <View className="flex-cols justify-center items-center w-44 bg-white border border-gray-200 p-3 mb-3 rounded-xl">
             <Text className="text-xl font-semibold text-gray-400">Cancel</Text>

@@ -3,7 +3,7 @@ import {
   DrawerContentScrollView,
   DrawerItemList,
 } from "@react-navigation/drawer";
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
 function CustomDrawerContent(props: any) {
   return (
@@ -33,8 +33,12 @@ function CustomDrawerContent(props: any) {
       </DrawerContentScrollView>
 
       <View className=" py-16 px-8 space-y-2">
-        <Text className="text-white text-lg">Need Help</Text>
-        <Text className="text-white text-lg">Logout</Text>
+        <TouchableOpacity>
+          <Text className="text-white text-lg">Need Help</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text className="text-white text-lg">Logout</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
